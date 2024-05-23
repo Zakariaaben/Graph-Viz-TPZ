@@ -3,7 +3,13 @@
   font-weight: 500  ;
   color: #f4f4f4;
   background-color: #242424;
-
+  
+  width: 100%;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html{
@@ -14,7 +20,7 @@ html{
 
 .container{
   display: flex;
- 
+  min-height: 100vh;
   
   justify-content: center;
   align-items: center;

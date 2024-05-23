@@ -3,6 +3,7 @@ import reactLogo from './assets/react.svg';
 import './App.css';
 import Graphviz from 'graphviz-react';
 import { useRef } from 'react';
+import { Circles } from 'react-loader-spinner';
 
 function App() {
   const [dot, setDot] = useState('graph{a--b}');
@@ -42,14 +43,24 @@ function App() {
   
 
   if (loading) {
-    return <div style={{fontSize:"3rem"}}>Loading...</div>;
+    return <div className="container">
+      <Circles
+      height="80"
+        width="80"
+        color="#f4f4f4"
+        ariaLabel="circles-loading"
+        wrapperStyle={{}}
+        wrapperClass=""
+        visible={true}
+        />
+    </div>;
   }
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return <div> Please Lunch the C program before </div>;
   }
   if(dot == "Initial Content") {
-    return <div style={{fontSize:"3rem"}}>Please Lunch the program before</div>;
+    return <div style={{fontSize:"3rem"}}>Please Lunch the C program before</div>;
   }
 
   
@@ -57,7 +68,7 @@ function App() {
   return (
     <>
       <div className='container'  >
-        <Graphviz dot={dot} width="300px"  options={{ height:"100%",width:"900px"}}/>
+        <Graphviz dot={dot}   options={{ height:"100%",width:"900px"}}/>
       </div>
     </>
   );
