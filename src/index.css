@@ -1,0 +1,22 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 500  ;
+  color: #f4f4f4;
+  background-color: #242424;
+
+}
+
+html{
+  height: 100%;
+  width: 100%;
+
+}
+
+.container{
+  display: flex;
+ 
+  
+  justify-content: center;
+  align-items: center;
+ 
+}
