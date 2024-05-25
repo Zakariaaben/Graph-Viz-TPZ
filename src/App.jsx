@@ -18,7 +18,7 @@ function App() {
     try {
       console.log(num);
 
-      const url = `https://graph-tp.vercel.app/data/${num}`;
+      const url = `https://data/${num}`;
       setLoading(true);
       const response = await fetch(url);
       
