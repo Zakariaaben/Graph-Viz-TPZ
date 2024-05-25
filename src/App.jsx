@@ -11,7 +11,7 @@ function App() {
 
   async function fetchData(num) {
     try {
-      setError(null);
+      setError(null)
       const url = `https://graph-tp.vercel.app/data/${num}`;
       const response = await fetch(url);
 
