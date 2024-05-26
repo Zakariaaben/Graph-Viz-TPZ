@@ -4,7 +4,7 @@ import Graphviz from 'graphviz-react';
 import { Circles } from 'react-loader-spinner';
 
 function App() {
-  const [dot, setDot] = useState('graph{a--b}');
+  const [dot, setDot] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [bst, setBST] = useState(1);
@@ -53,7 +53,7 @@ function App() {
     return () => clearInterval(intervalId); // Cleanup interval on component unmount
   }, [bst, dot]);
 
-  if (error != null) {
+  if (error != null || dot === '') {
     return <div className='container' style={{ fontSize: "3rem" }}> Please launch the C program before </div>;
   }
 
